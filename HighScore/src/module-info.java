@@ -1,9 +1,2 @@
-/**
- * 
- */
-/**
- * @author alexa
- *
- */
 module highscore {
 }
