@@ -9,6 +9,7 @@ public class Player {
 	private String poste;
 	private float height ;
 	private String clubName;
+	private PlayerStats pStats;
 	private Boolean isStar;
 	
 	
@@ -18,13 +19,14 @@ public class Player {
 		// TODO Auto-generated constructor stub
 	}
 
-
-	public Player(String name, String poste, float height, String clubName, Boolean isStar) {
+	
+	public Player(String name, String poste, float height, String clubName, PlayerStats pStats, Boolean isStar) {
 		super();
 		this.name = name;
 		this.poste = poste;
 		this.height = height;
 		this.clubName = clubName;
+		this.pStats = pStats;
 		this.isStar = isStar;
 	}
 
@@ -76,6 +78,16 @@ public class Player {
 
 	public void setIsStar(Boolean isStar) {
 		this.isStar = isStar;
+	}
+
+
+	public PlayerStats getpStats() {
+		return pStats;
+	}
+
+
+	public void setpStats(PlayerStats pStats) {
+		this.pStats = pStats;
 	}
 	
 	
