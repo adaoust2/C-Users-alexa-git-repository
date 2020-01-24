@@ -1,5 +1,7 @@
 package data;
-
+/**
+ * @author oumar
+ * */
 public class Tournoi {
 	private Groupe groups ;
 
