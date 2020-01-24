@@ -6,7 +6,7 @@ public class StatPlayer {
 	private float dribble;
 	private int endurrance;
 	private float clutch;
-	private float rebDefense;
+	private float defense;
 	private float rebAttack;
 	
 	public StatPlayer() {
@@ -14,14 +14,14 @@ public class StatPlayer {
 	}
 
 	public StatPlayer(float shoot2Points, float shoot3Points, float dribble, int endurrance, float clutch,
-			float rebDefense, float rebAttack) {
+			float defense, float rebAttack) {
 		super();
 		this.shoot2Points = shoot2Points;
 		this.shoot3Points = shoot3Points;
 		this.dribble = dribble;
 		this.endurrance = endurrance;
 		this.clutch = clutch;
-		this.rebDefense = rebDefense;
+		this.defense = defense;
 		this.rebAttack = rebAttack;
 	}
 
@@ -65,12 +65,12 @@ public class StatPlayer {
 		this.clutch = clutch;
 	}
 
-	public float getRebDefense() {
-		return rebDefense;
+	public float getDefense() {
+		return defense;
 	}
 
-	public void setRebDefense(float rebDefense) {
-		this.rebDefense = rebDefense;
+	public void setDefense(float defense) {
+		this.defense = defense;
 	}
 
 	public float getRebAttack() {
@@ -81,5 +81,6 @@ public class StatPlayer {
 		this.rebAttack = rebAttack;
 	}
 
+	
 	
 }
