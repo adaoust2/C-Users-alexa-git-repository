@@ -9,11 +9,10 @@ public class StatPlayer {
 	private float defense;
 	private float attack;
 	
-	
 	public StatPlayer() {
 		super();
 	}
-	
+
 	public StatPlayer(float shoot2Points, float shoot3Points, float dribble, int endurrance, float clutch,
 			float defense, float attack) {
 		super();

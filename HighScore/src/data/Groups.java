@@ -10,7 +10,6 @@ public class Groups {
 	public Groups() {
 		super();
 	}
-
 	public Groups(HashMap<String, Club> listOfCLubs, int nbClub, String name) {
 		super();
 		this.listOfCLubs = listOfCLubs;

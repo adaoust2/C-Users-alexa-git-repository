@@ -19,7 +19,6 @@ public class Classement {
 		super();
 		this.listOfGroups = listOfGroups;
 	}
-
 	@Override
 	public String toString() {
 		return "Classement []";
