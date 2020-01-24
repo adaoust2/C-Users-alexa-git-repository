@@ -3,18 +3,18 @@ package data;
  * @author oumar
  * */
 public class Tournoi {
-	private Groupe groups ;
+	private Groups groups ;
 
-	public Tournoi(Groupe groups) {
+	public Tournoi(Groups groups) {
 		super();
 		this.groups = groups;
 	}
 
-	public Groupe getGroups() {
+	public Groups getGroups() {
 		return groups;
 	}
 
-	public void setGroups(Groupe groups) {
+	public void setGroups(Groups groups) {
 		this.groups = groups;
 	}
 
