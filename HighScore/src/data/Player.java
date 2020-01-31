@@ -10,9 +10,7 @@ public class Player {
 	private float height ;
 	private String clubName;
 	private Boolean isStar;
-	
-	
-	
+
 	public Player() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -17,6 +17,7 @@ public class PlayerGenerator {
     private static Random rand = new Random();
 
     private Club club;
+    private String poste;
 
 
     public PlayerGenerator() {
@@ -27,11 +28,20 @@ public class PlayerGenerator {
         this.club = club;
     }
 
+    public PlayerGenerator(Club club, String poste) {
+        this.club = club;
+        this.poste = poste;
+    }
+
 
     public Player generatePlayer() {
         Player newPlayer = new Player();
         newPlayer.setClubName(this.club.getName());
         newPlayer.setName(generateName());
+        newPlayer.setIsStar(Math.round(this.generateRandom(1, 16))!=2);
+        newPlayer.setPoste(this.poste);
+        newPlayer.setHeight(generateHeight());
+
         return newPlayer;
     }
 
@@ -39,6 +49,27 @@ public class PlayerGenerator {
         return Name[rand.nextInt(Name.length)] + " "+
                 Surname[rand.nextInt(Surname.length)];
 
+    }
+
+    private float generateHeight(){
+        switch (this.poste){
+            case"pivot":
+                return generateRandom(1.90f, 2.10f);
+
+            case "ailier":
+                return generateRandom(1.80f, 2.00f);
+
+            case"meneur":
+                return generateRandom(1.90f, 2.00f);
+
+            default:
+                return 2.00f;
+        }
+
+    }
+
+    private float generateRandom(float min ,float max){
+        return min + (int)(Math.random() * ((max - min) + 1));
     }
 
 }
