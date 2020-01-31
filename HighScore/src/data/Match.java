@@ -7,16 +7,14 @@ package data;
  * */
 public class Match {
    
-	private Club club1 ;
+    private Club club1 ;
     private Club club2 ;
-    private String lieu;
     private String resultat ; 
     
-    public Match(Club club1, Club club2, String lieu, String resultat) {
+    public Match(Club club1, Club club2, String resultat) {
 		super();
 		this.club1 = club1;
 		this.club2 = club2;
-		this.lieu = lieu;
 		this.resultat = resultat;
 	}
 
@@ -41,14 +39,6 @@ public class Match {
 		this.club2 = club2;
 	}
 
-	public String getLieu() {
-		return lieu;
-	}
-
-	public void setLieu(String lieu) {
-		this.lieu = lieu;
-	}
-
 	public String getResultat() {
 		return resultat;
 	}
@@ -59,7 +49,7 @@ public class Match {
 
 	@Override
 	public String toString() {
-		return "Match [club 1 = " +club1 + "club2= "+club2+" lieu=" + lieu + ", resultat=" + resultat + "]";
+		rreturn "Match [club 1 = " +club1 + "club2= "+club2+", result=" + result + "]";
 	}
     
 }
