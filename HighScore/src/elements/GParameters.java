@@ -26,6 +26,8 @@ public class GParameters {
 	
 	public static final String[] post = {"meneur","arriere","ailier","ailier_fort","pivot"};
 	
+	public static final int NB_TEAM = 32;
+	
 
 }
  
