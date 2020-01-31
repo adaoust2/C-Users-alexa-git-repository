@@ -2,6 +2,8 @@ package generator;
 
 import data.Club;
 import data.Player;
+import data.PlayerStats;
+import data.StatPlayer;
 import elements.GParameters;
 
 import java.util.Random;
@@ -43,6 +45,7 @@ public class PlayerGenerator {
         newPlayer.setIsStar(Math.round(this.generateRandom(1, 16))!=2);
         newPlayer.setPoste(this.poste);
         newPlayer.setHeight(generateHeight());
+        newPlayer.setpStats(generateStat());
 
         return newPlayer;
     }
@@ -84,23 +87,21 @@ public class PlayerGenerator {
 
     }
 
-    public static void generateStat() {
+    public static PlayerStats generateStat() {
         int stat = 0;
 
+        PlayerStats stats = new PlayerStats();
         String statInfos = "";
         String[] statName = {"SHOOT_2","SHOOT_3","DRIBBLE","ENDURANCE","CLUTCH","DEFENSE","REBOND_DEF","REBOND_ATK"};
 
-        for(int i = 0; i< GParameters.MAX_PLAYERS; i++){
-
-            statInfos += "Joueur "+i;
-
-            for(int j=0;j<GParameters.MAX_STATS;j++) {
-                stat = randomStats(GParameters.intervalle[j].getMin(), GParameters.intervalle[j].getMax());
-                statInfos +=" : "+statName[j]+" "+stat;
-            }
-
-            statInfos = "";
+        for(int j=0;j<GParameters.MAX_STATS;j++) {
+            stat = randomStats(GParameters.intervalle[j].getMin(), GParameters.intervalle[j].getMax());
+            statInfos +=" : "+statName[j]+" "+stat;
+            stats.setStatPlayer(statName[j], stat);
         }
-    }
 
+        return stats;
+    }
 }
+
+

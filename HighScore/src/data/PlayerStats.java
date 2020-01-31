@@ -55,7 +55,7 @@ public class PlayerStats {
 		return endurrance;
 	}
 
-	public void setEndurrance(int endurrance) {
+	public void setEndurrance(float endurrance) {
 		this.endurrance = endurrance;
 	}
 
@@ -90,6 +90,45 @@ public class PlayerStats {
 	public void setRebAttack(float rebAttack) {
 		this.rebAttack = rebAttack;
 	}
-	
+
+	public void setStatPlayer(String type, float value){
+		switch (type){
+			case "SHOOT_2":
+				this.setShoot2Points(value);
+				break;
+
+			case "SHOOT_3":
+				this.setShoot3Points(value);
+				break;
+
+			case "DRIBBLE":
+				this.setDribble(value);
+				break;
+
+			case "ENDURANCE":
+				this.setEndurrance(value);
+				break;
+
+			case "CLUTCH":
+				this.setClutch(value);
+				break;
+
+			case "DEFENSE":
+				this.setDefense(value);
+				break;
+
+			case "REBOND_DEF":
+				this.setRebDefense(value);
+				break;
+
+			case "REBOND_ATK":
+				this.setRebAttack(value);
+				break;
+		}
+	}
+
+	public String toString(){
+		return "\n   ENDURANCE : "+this.endurrance;
+	}
 	
 }

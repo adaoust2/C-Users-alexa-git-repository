@@ -12,4 +12,7 @@ public class MatchManager {
 		this.club1=club1;
 		this.club2=club2;
 	}
+	public void matchProcess(Club club1,Club club2) {
+		
+	}
 }
