@@ -11,6 +11,7 @@ public class PlayerGenerator {
             "Alvin", "Soren", "Louis", "Devon",
             "Kellen", "Robby", "Max", "Connor", "Franklin",
             "Luke", "Edward", "Zac", "Ryan", "Rodney", "Mike" };
+
     private static String[] Surname = { "Simpson", "Turner", "Molina", "Burton", "Fletcher",
             "Phillips", "Ross", "Brown", "Anderson", "Melton", "Sanford", "Bishop", "Patel", "Powers", "Hartman",
             "Beard", "Barnes", "Gibson", "Todd", "Fernandez", "Todd", "Bruce", "Bennett", "Grant", "Young"};
@@ -54,7 +55,7 @@ public class PlayerGenerator {
     private float generateHeight(){
         switch (this.poste){
             case"pivot":
-                return generateRandom(1.90f, 2.10f);
+                return generateRandom(2.00f, 2.20f);
 
             case "ailier":
                 return generateRandom(1.80f, 2.00f);
