@@ -118,5 +118,14 @@ public class Player {
 	public void setpStats(PlayerStats pStats) {
 		this.pStats = pStats;
 	}
+<<<<<<< HEAD
+=======
+
+
+	
+	
+	
+	
+>>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 
 }

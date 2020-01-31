@@ -2,6 +2,8 @@ package generator;
 
 import data.Club;
 import data.Player;
+import data.PlayerStats;
+import elements.GParameters;
 
 import java.util.Random;
 
@@ -11,6 +13,7 @@ public class PlayerGenerator {
             "Alvin", "Soren", "Louis", "Devon",
             "Kellen", "Robby", "Max", "Connor", "Franklin",
             "Luke", "Edward", "Zac", "Ryan", "Rodney", "Mike" };
+
     private static String[] Surname = { "Simpson", "Turner", "Molina", "Burton", "Fletcher",
             "Phillips", "Ross", "Brown", "Anderson", "Melton", "Sanford", "Bishop", "Patel", "Powers", "Hartman",
             "Beard", "Barnes", "Gibson", "Todd", "Fernandez", "Todd", "Bruce", "Bennett", "Grant", "Young"};
@@ -41,6 +44,7 @@ public class PlayerGenerator {
         newPlayer.setIsStar(Math.round(this.generateRandom(1, 16))!=2);
         newPlayer.setPoste(this.poste);
         newPlayer.setHeight(generateHeight());
+        newPlayer.setpStats(generateStat());
 
         return newPlayer;
     }
@@ -54,7 +58,7 @@ public class PlayerGenerator {
     private float generateHeight(){
         switch (this.poste){
             case"pivot":
-                return generateRandom(1.90f, 2.10f);
+                return generateRandom(2.00f, 2.20f);
 
             case "ailier":
                 return generateRandom(1.80f, 2.00f);
@@ -72,4 +76,31 @@ public class PlayerGenerator {
         return min + (int)(Math.random() * ((max - min) + 1));
     }
 
+    public static int randomStats(int min, int max){
+
+        Random rand = new Random();
+
+        int stat = rand.nextInt((max - min) + 1) + min;
+
+        return stat;
+
+    }
+
+    public static PlayerStats generateStat() {
+        int stat = 0;
+
+        PlayerStats stats = new PlayerStats();
+        String statInfos = "";
+        String[] statName = {"SHOOT_2","SHOOT_3","DRIBBLE","ENDURANCE","CLUTCH","DEFENSE","REBOND_DEF","REBOND_ATK"};
+
+        for(int j=0;j<GParameters.MAX_STATS;j++) {
+            stat = randomStats(GParameters.intervalle[j].getMin(), GParameters.intervalle[j].getMax());
+            statInfos +=" : "+statName[j]+" "+stat;
+            stats.setStatPlayer(statName[j], stat);
+        }
+
+        return stats;
+    }
 }
+
+

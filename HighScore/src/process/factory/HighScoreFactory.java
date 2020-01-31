@@ -31,8 +31,8 @@ public class HighScoreFactory {
 	 * @param cStat
 	 * @return
 	 */
-	public static Club createClub(String name, String group, HashMap<String, Player> players,ClubStats cStat) {
-		return new Club(name,group,players,cStat);
+	public static Club createClub(String name, String group, HashMap<String, Player> players) {
+		return new Club(name,group,players);
 	}
 	
 	/**
@@ -52,7 +52,11 @@ public class HighScoreFactory {
 	 * @param resultat
 	 * @return
 	 */
+<<<<<<< HEAD
 	public static Match createMatch(Club club1, Club club2, String lieu, String resultat) {
+=======
+	public static Match createMatch(Club club1, Club club2, String resultat) {
+>>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 		return new Match(club1,club2,resultat);
 	}
 	
@@ -75,9 +79,7 @@ public class HighScoreFactory {
 	/**
 	 * @return
 	 */
-	public static ClubStats createClubStats(){
-		return new ClubStats();
-	}
+
 	
 	/**
 	 * @param listOfGroups

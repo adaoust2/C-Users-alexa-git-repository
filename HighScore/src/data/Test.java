@@ -1,20 +1,32 @@
 package data;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 import elements.GParameters;
+<<<<<<< HEAD
 import elements.Intervalle;
+=======
+import generator.ClubGenerator;
+import generator.MoyenneGenrator;
+import manager.MatchManager;
+>>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 
 public class Test {
 	private static int stat = 0;  
 	private static ArrayList<String> playersStats = new ArrayList<String>();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 	public static void main(String[] args) {
 
+<<<<<<< HEAD
 		generateStat();
+=======
+>>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 		System.out.println("PLAYERS STATS:");
+<<<<<<< HEAD
         for(int i=0;i<playersStats.size();i++){
         	
         	System.out.println(playersStats.get(i));
@@ -63,7 +75,37 @@ public class Test {
 			}
 			playersStats.add(statInfos);
 			statInfos = "";
+=======
+		for (int i = 0; i < playersStats.size(); i++) {
+			System.out.println(playersStats.get(i));
+>>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 		}
+
+		ClubGenerator generator = new ClubGenerator();
+		ArrayList<Club> clubs = generator.generateClubs();
+
+		Iterator it = clubs.iterator();
+		
+		while (it.hasNext()) {
+			Club current = (Club) it.next();
+			System.out.println("\n\n"+current.getName() + "\n");
+			HashMap<String, Player> players = current.getPlayers();
+			for (Map.Entry me : players.entrySet()) {
+				Player currentPlayer = (Player) me.getValue();
+				//System.out.println(currentPlayer.getpStats());
+
+				//System.out.println("\n   NOM : " + currentPlayer.getName() + "\n   POSTE : " + currentPlayer.getPoste() + "\n   TAILLE : " + currentPlayer.getHeight()+currentPlayer.getpStats().toString());
+
+
+			}
+			MoyenneGenrator moyGenerator = new MoyenneGenrator(current);
+			System.out.println("\n   MOYENNE : "+moyGenerator.calculMoyenne() );
+
+		}
+		
+		
+		MatchManager match = new MatchManager(0, clubs.get(0), clubs.get(1));
+		match.matchProcess(clubs.get(0), clubs.get(1));
 	}
 
 }

@@ -86,9 +86,12 @@ public class PlayerStats {
 		return endurrance;
 	}
 
+<<<<<<< HEAD
 	/**
 	 * @param float endurrance
 	 **/
+=======
+>>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 	public void setEndurrance(float endurrance) {
 		this.endurrance = endurrance;
 	}
@@ -148,6 +151,56 @@ public class PlayerStats {
 	public void setRebAttack(float rebAttack) {
 		this.rebAttack = rebAttack;
 	}
-	
+
+	public void setStatPlayer(String type, float value){
+		switch (type){
+			case "SHOOT_2":
+				this.setShoot2Points(value);
+				break;
+
+			case "SHOOT_3":
+				this.setShoot3Points(value);
+				break;
+
+			case "DRIBBLE":
+				this.setDribble(value);
+				break;
+
+			case "ENDURANCE":
+				this.setEndurrance(value);
+				break;
+
+			case "CLUTCH":
+				this.setClutch(value);
+				break;
+
+			case "DEFENSE":
+				this.setDefense(value);
+				break;
+
+			case "REBOND_DEF":
+				this.setRebDefense(value);
+				break;
+
+			case "REBOND_ATK":
+				this.setRebAttack(value);
+				break;
+		}
+	}
+
+	public float getMoyenne(){
+		return (this.clutch +
+				this.endurrance+
+				this.defense+
+				this.shoot2Points+
+				this.shoot3Points+
+				this.dribble+
+				this.rebDefense+
+				this.rebAttack)/8;
+	}
+
+	public String toString(){
+		return "\n   ENDURANCE : "+this.endurrance;
+	}
 	
 }

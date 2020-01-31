@@ -34,12 +34,16 @@ public class Intervalle {
 		this.min = min;
 	}
 
-
+	/**
+	 * @return max
+	 * */
 	public int getMax() {
 		return max;
 	}
 
-
+	/**
+	 * @param max
+	 * */
 	public void setMax(int max) {
 		this.max = max;
 	}
