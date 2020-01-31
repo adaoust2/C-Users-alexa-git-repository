@@ -15,7 +15,7 @@ public class Test {
 
 		System.out.println("PLAYERS STATS:");
 		for (int i = 0; i < playersStats.size(); i++) {
-			//System.out.println(playersStats.get(i));
+			System.out.println(playersStats.get(i));
 		}
 
 		ClubGenerator generator = new ClubGenerator();
@@ -29,8 +29,8 @@ public class Test {
 			HashMap<String, Player> players = current.getPlayers();
 			for (Map.Entry me : players.entrySet()) {
 				Player currentPlayer = (Player) me.getValue();
-				System.out.println("\n   NOM : " + currentPlayer.getName() + "\n   POSTE : " + currentPlayer.getPoste() + "\n   TAILLE : " + currentPlayer.getHeight());
-
+				System.out.println(currentPlayer.getpStats());
+				//System.out.println("\n   NOM : " + currentPlayer.getName() + "\n   POSTE : " + currentPlayer.getPoste() + "\n   TAILLE : " + currentPlayer.getHeight());
 			}
 
 		}
