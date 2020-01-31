@@ -127,6 +127,17 @@ public class PlayerStats {
 		}
 	}
 
+	public float getMoyenne(){
+		return (this.clutch +
+				this.endurrance+
+				this.defense+
+				this.shoot2Points+
+				this.shoot3Points+
+				this.dribble+
+				this.rebDefense+
+				this.rebAttack)/8;
+	}
+
 	public String toString(){
 		return "\n   ENDURANCE : "+this.endurrance;
 	}

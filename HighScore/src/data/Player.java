@@ -87,6 +87,8 @@ public class Player {
 	public void setpStats(PlayerStats pStats) {
 		this.pStats = pStats;
 	}
+
+
 	
 	
 	
