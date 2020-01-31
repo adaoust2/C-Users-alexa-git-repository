@@ -49,7 +49,7 @@ public class Match {
 
 	@Override
 	public String toString() {
-		rreturn "Match [club 1 = " +club1 + "club2= "+club2+", result=" + result + "]";
+		return "Match [club 1 = " +club1 + "club2= "+club2+", result=" + resultat + "]";
 	}
     
 }

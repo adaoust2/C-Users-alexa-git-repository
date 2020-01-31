@@ -16,6 +16,7 @@ public class TournamentManger {
     public TournamentManger(){
 
     }
+    
 
     public void startTournament(){
     	MatchManager match1 = new MatchManager(0,current , (Club) it.next());

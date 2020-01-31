@@ -25,7 +25,7 @@ public class MatchManager {
 	 */
 	public void matchProcess(Club club1,Club club2) {
 		float moy1,moy2;
-		Match match1 = new Match (club1,club2,"","");
+		Match match1 = new Match (club1,club2,"");
 		MoyenneGenrator moyequip1 = new MoyenneGenrator(club1);
 		MoyenneGenrator moyequip2 = new MoyenneGenrator(club2);
 		moy1=moyequip1.calculMoyenne();

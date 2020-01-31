@@ -41,6 +41,7 @@ public class Test {
 
 		}
 		
+		
 		MatchManager match = new MatchManager(0, clubs.get(0), clubs.get(1));
 		match.matchProcess(clubs.get(0), clubs.get(1));
 	}
