@@ -11,21 +11,20 @@ public class Club {
 	private String name;
 	private String group;
 	private HashMap<String, Player> players;
-	//private StatClub stat;
-	private Boolean isStar;
+	private ClubStats cStats;
 	
 	
 	public Club() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
+	} 
 
-	public Club(String name, String group, HashMap<String, Player> players, Boolean isStar) {
+	public Club(String name, String group, HashMap<String, Player> players,ClubStats cStat) {
 		super();
 		this.name = name;
 		this.group = group;
 		this.players = players;
-		this.isStar = isStar;
+		this.cStats = cStat;
 	}
 
 	public String getName() {
@@ -52,15 +51,13 @@ public class Club {
 		this.players = players;
 	}
 
-	public Boolean getIsStar() {
-		return isStar;
+	public ClubStats getcStats() {
+		return cStats;
 	}
 
-	public void setIsStar(Boolean isStar) {
-		this.isStar = isStar;
+	public void setcStats(ClubStats cStats) {
+		this.cStats = cStats;
 	}
-	
-	
-	
+		
 	
 }
