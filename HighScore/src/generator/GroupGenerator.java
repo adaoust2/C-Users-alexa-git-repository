@@ -6,4 +6,10 @@ public class GroupGenerator {
 
     }
 
+    public void GenerateGroups(){
+        for (int i=0; i<8; i++){
+
+        }
+    }
+
 }
