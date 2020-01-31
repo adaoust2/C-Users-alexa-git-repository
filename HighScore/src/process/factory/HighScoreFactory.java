@@ -9,9 +9,7 @@ import data.*;
  * @author @Bjmeo
  */
 public class HighScoreFactory {
-	
-	
-	
+
 	/**
 	 * @param name
 	 * @param poste
@@ -55,7 +53,7 @@ public class HighScoreFactory {
 	 * @return
 	 */
 	public static Match createMatch(Club club1, Club club2, String lieu, String resultat) {
-		return new Match(club1,club2,lieu,resultat);
+		return new Match(club1,club2,resultat);
 	}
 	
 	/**

@@ -12,18 +12,14 @@ public class Test {
 
 
 	public static void main(String[] args) {
-		
-		
+
 		generateStat();
 		System.out.println("PLAYERS STATS:");
         for(int i=0;i<playersStats.size();i++){
         	
         	System.out.println(playersStats.get(i));
         }
-        
-        
-        
-        
+      
 	}
 	
 	public static int randomStats(int min, int max){

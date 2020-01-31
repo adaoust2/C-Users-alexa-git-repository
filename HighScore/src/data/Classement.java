@@ -3,6 +3,9 @@ package data;
 import java.util.HashMap;
 /**
  * @author oumar
+ * 
+ * This class display the classment of a group
+ * for the four club 
  * **/
 public class Classement {
 	private HashMap<String, Groups> listOfGroups ;

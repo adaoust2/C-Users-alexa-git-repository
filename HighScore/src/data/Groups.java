@@ -10,6 +10,11 @@ public class Groups {
 	public Groups() {
 		super();
 	}
+	/**
+	 * @param HashMap listOfClubs 
+	 * @param int nbClub 
+	 * @param String name
+	 * */
 	public Groups(HashMap<String, Club> listOfCLubs, int nbClub, String name) {
 		super();
 		this.listOfCLubs = listOfCLubs;
@@ -17,26 +22,44 @@ public class Groups {
 		this.name = name;
 	}
 
+	/**
+	 * @return HashMap listOfClubs
+	 * */
 	public HashMap<String, Club> getListOfCLubs() {
 		return listOfCLubs;
 	}
 
+	/**
+	 * @param HashMap listOfClubs
+	 * */
 	public void setListOfCLubs(HashMap<String, Club> listOfCLubs) {
 		this.listOfCLubs = listOfCLubs;
 	}
-
+	
+	/**
+	 * @return int nbClub
+	 * */
 	public int getNbClub() {
 		return nbClub;
 	}
 
+	/**
+	 * @param int nbClub
+	 * */
 	public void setNbClub(int nbClub) {
 		this.nbClub = nbClub;
 	}
 
+	/**
+	 * @return String name
+	 * */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param String name
+	 * */
 	public void setName(String name) {
 		this.name = name;
 	}

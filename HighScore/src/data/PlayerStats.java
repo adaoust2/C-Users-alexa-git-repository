@@ -14,79 +14,137 @@ public class PlayerStats {
 		super();
 	}
 
-	public PlayerStats(float shoot2Points, float shoot3Points, float dribble, float endurrance, float clutch,
+	/**
+	 * @param float shoot2points
+	 * @param float shoot3points
+	 * @param float dribble 
+	 * @param float endurance 
+	 * @param float clutch
+	 * @param float defense
+	 * @param float rebrebDefense 
+	 * @param float rebAttack
+	 **/
+	public PlayerStats(float shoot2Points, float shoot3Points, float dribble, float endurance, float clutch,
 			float defense, float rebDefense, float rebAttack) {
 		super();
 		this.shoot2Points = shoot2Points;
 		this.shoot3Points = shoot3Points;
 		this.dribble = dribble;
-		this.endurrance = endurrance;
+		this.endurrance = endurance;
 		this.clutch = clutch;
 		this.defense = defense;
 		this.rebDefense = rebDefense;
 		this.rebAttack = rebAttack;
 	}
 
+	/**
+	 * @return float shoot2points
+	 **/
 	public float getShoot2Points() {
 		return shoot2Points;
 	}
 
+	/**
+	 * @param float shoot2points
+	 **/
 	public void setShoot2Points(float shoot2Points) {
 		this.shoot2Points = shoot2Points;
 	}
 
+	/**
+	 * @return float shoot3points
+	 **/
 	public float getShoot3Points() {
 		return shoot3Points;
 	}
 
+	/**
+	 * @param float shoot3points
+	 **/
 	public void setShoot3Points(float shoot3Points) {
 		this.shoot3Points = shoot3Points;
 	}
 
+	/**
+	 * @return float dribble
+	 **/
 	public float getDribble() {
 		return dribble;
 	}
 
+	/**
+	 * @param float dribble
+	 **/
 	public void setDribble(float dribble) {
 		this.dribble = dribble;
 	}
 
+	/**
+	 * @return float endurrance
+	 **/
 	public float getEndurrance() {
 		return endurrance;
 	}
 
-	public void setEndurrance(int endurrance) {
+	/**
+	 * @param float endurrance
+	 **/
+	public void setEndurrance(float endurrance) {
 		this.endurrance = endurrance;
 	}
 
+	/**
+	 * @return float clutch
+	 **/
 	public float getClutch() {
 		return clutch;
 	}
 
+	/**
+	 * @param float clutch
+	 **/
 	public void setClutch(float clutch) {
 		this.clutch = clutch;
 	}
 
+	/**
+	 * @return float defense
+	 **/
 	public float getDefense() {
 		return defense;
 	}
 
+	/**
+	 * @param float defense
+	 **/
 	public void setDefense(float defense) {
 		this.defense = defense;
 	}
 
+	/**
+	 * @return float rebDefense
+	 **/
 	public float getRebDefense() {
 		return rebDefense;
 	}
 
+	/**
+	 * @param float rebDefense
+	 **/
 	public void setRebDefense(float rebDefense) {
 		this.rebDefense = rebDefense;
 	}
 
+	/**
+	 * @return float rebAttack
+	 **/
 	public float getRebAttack() {
 		return rebAttack;
 	}
 
+	/**
+	 * @param float rebAttack
+	 **/
 	public void setRebAttack(float rebAttack) {
 		this.rebAttack = rebAttack;
 	}
