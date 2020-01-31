@@ -38,7 +38,6 @@ public class MatchManager {
 			match1.setResultat(club1.getName());
 			System.out.println("Le vainqueur est " + match1.getResultat());
 		}
-		
 	}
 	public int victoire(float moy1,float moy2) {
 		float ran ;

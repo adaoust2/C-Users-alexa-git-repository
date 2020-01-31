@@ -22,7 +22,6 @@ public class Test {
 		ArrayList<Club> clubs = generator.generateClubs();
 
 		Iterator it = clubs.iterator();
-
 		
 		while (it.hasNext()) {
 			Club current = (Club) it.next();
