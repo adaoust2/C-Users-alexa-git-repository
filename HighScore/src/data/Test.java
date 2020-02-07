@@ -4,7 +4,6 @@ import java.util.*;
 
 import elements.GParameters;
 import generator.ClubGenerator;
-import generator.MoyenneGenrator;
 
 public class Test {
 	
@@ -26,10 +25,16 @@ public class Test {
 			Club current = (Club) it.next();
 			System.out.println("\n\n"+current.getName() + "\n");
 			HashMap<String, Player> players = current.getPlayers();
-			MoyenneGenrator moyGenerator = new MoyenneGenrator(current);
-			System.out.println("\n   MOYENNE : "+moyGenerator.calculMoyenne() );
+			for (Map.Entry me : players.entrySet()) {
+				Player currentPlayer = (Player) me.getValue();
+
+				System.out.println("\n   NOM : " + currentPlayer.getName() + "\n   POSTE : " + currentPlayer.getPoste() + "\n   TAILLE : " + currentPlayer.getHeight()+currentPlayer.getpStats().toString());
+
+			}
 
 		}
 	}
+
+
 
 }

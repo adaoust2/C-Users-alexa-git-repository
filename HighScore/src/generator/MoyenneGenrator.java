@@ -29,7 +29,6 @@ public class MoyenneGenrator {
             PlayerStats stats = currentPlayer.getpStats();
             somme = somme + stats.getMoyenne();
         }
-
         return somme/12;
     }
 
