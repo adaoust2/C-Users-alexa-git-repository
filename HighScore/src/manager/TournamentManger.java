@@ -46,7 +46,7 @@ public class TournamentManger {
     		for(Club club : chapeauFinal)
     			System.out.println(club.toString());
     	}
-    	
+    	 
     	groups = new GroupGenerator(chap);
     	
         ArrayList<ArrayList<Club>> g = groups.GenerateGroups();
