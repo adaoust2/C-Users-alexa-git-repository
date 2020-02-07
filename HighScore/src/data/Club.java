@@ -15,13 +15,6 @@ public class Club implements Comparable{
 	private ClubStats cStats;
 	
 	
-	public Club() {
-	} 
-
-
-	public Club(String name, String group, HashMap<String, Player> players,ClubStats cStat) {
-
-	}
 	public Club(String name, String group, HashMap<String, Player> players) {
 		super();
 		this.name = name;

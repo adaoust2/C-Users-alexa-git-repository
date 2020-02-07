@@ -25,10 +25,12 @@ public class ClubGenerator {
 
     public ArrayList<Club> generateClubs(){
         ArrayList<Club> clubs = new ArrayList<Club>();
+        ArrayList<Player> pl = new ArrayList<Player>();
         for (int i=0; i<32; i++){
-            Club newClub = new Club();
-            newClub.setName(clubNames[i]);
             HashMap<String, Player> players = new HashMap<String, Player>();
+            Club newClub = new Club("","",players);
+            newClub.setName(clubNames[i]);
+
             for (int j=0; j<12; j++){
                 PlayerGenerator generator = new PlayerGenerator(newClub, postes[j]);
                 Player newPlayer = generator.generatePlayer();

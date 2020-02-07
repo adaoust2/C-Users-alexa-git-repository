@@ -52,11 +52,7 @@ public class HighScoreFactory {
 	 * @param resultat
 	 * @return
 	 */
-<<<<<<< HEAD
 	public static Match createMatch(Club club1, Club club2, String lieu, String resultat) {
-=======
-	public static Match createMatch(Club club1, Club club2, String resultat) {
->>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 		return new Match(club1,club2,resultat);
 	}
 	
