@@ -19,30 +19,43 @@ public class Club {
 		// TODO Auto-generated constructor stub
 	} 
 
+
 	public Club(String name, String group, HashMap<String, Player> players,ClubStats cStat) {
+
+	}
+	public Club(String name, String group, HashMap<String, Player> players) {
 		super();
 		this.name = name;
 		this.group = group;
 		this.players = players;
-		this.cStats = cStat;
 	}
-
+	/**
+	 * @return String name 
+	 * */
 	public String getName() {
 		return name;
 	}
+	
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * @return String group 
+	 * */
 	public String getGroup() {
 		return group;
 	}
+
 
 	public void setGroup(String group) {
 		this.group = group;
 	}
 
+	/**
+	 * @return HashMap players 
+	 * */
 	public HashMap<String, Player> getPlayers() {
 		return players;
 	}
@@ -51,13 +64,17 @@ public class Club {
 		this.players = players;
 	}
 
+	/**
+	 * @return clubStats cstats  
+	 * */
 	public ClubStats getcStats() {
 		return cStats;
 	}
 
+
 	public void setcStats(ClubStats cStats) {
 		this.cStats = cStats;
 	}
-		
+
 	
 }

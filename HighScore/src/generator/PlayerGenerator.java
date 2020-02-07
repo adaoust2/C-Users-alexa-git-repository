@@ -3,7 +3,6 @@ package generator;
 import data.Club;
 import data.Player;
 import data.PlayerStats;
-import data.StatPlayer;
 import elements.GParameters;
 
 import java.util.Random;
