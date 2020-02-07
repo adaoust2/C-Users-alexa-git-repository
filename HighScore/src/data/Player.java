@@ -115,8 +115,7 @@ public class Player {
 	/**
 	 * @param PlayerStats pStats
 	 **/
-	public void setpStats(PlayerStats pStats) {
+	public void setpStats(PlayerStats pStats){
 		this.pStats = pStats;
 	}
-
 }

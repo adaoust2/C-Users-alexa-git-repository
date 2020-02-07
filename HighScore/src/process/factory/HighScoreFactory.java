@@ -52,7 +52,7 @@ public class HighScoreFactory {
 	 * @param resultat
 	 * @return
 	 */
-	public static Match createMatch(Club club1, Club club2, String lieu, String resultat) {
+	public static Match createMatch(Club club1, Club club2, String resultat) {
 		return new Match(club1,club2,resultat);
 	}
 	

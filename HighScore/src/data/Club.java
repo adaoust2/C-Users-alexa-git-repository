@@ -83,5 +83,11 @@ public class Club implements Comparable{
 		float compareLevel =((Club)o).getLevel();
 		return Float.compare(this.level,compareLevel);
 	}
+	@Override
+	public String toString() {
+		return "Club [name=" + name + ", group=" + group + ", players=" + players + ", cStats=" + cStats + "]";
+
+	}
+	
 }
 

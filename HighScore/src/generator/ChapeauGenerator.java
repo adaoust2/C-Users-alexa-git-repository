@@ -11,7 +11,8 @@ public class ChapeauGenerator {
 
     }
 
-    public ArrayList<ArrayList<Club>> generateChapeau(ArrayList<Club> clubs){
+    @SuppressWarnings("unchecked")
+	public ArrayList<ArrayList<Club>> generateChapeau(ArrayList<Club> clubs){
         ArrayList<Club> listClub = new ArrayList<Club>();
 
         for(Club club : clubs){
@@ -55,6 +56,18 @@ public class ChapeauGenerator {
 
         for(int i = 0; i<chapeau2.size();i++) {
             System.out.println(chapeau2.get(i).getLevel());
+        }
+        
+        System.out.println("\n Chapeau 3");
+
+        for(int i = 0; i<chapeau3.size();i++) {
+            System.out.println(chapeau3.get(i).getLevel());
+        }
+
+        System.out.println("\n Chapeau 4");
+
+        for(int i = 0; i<chapeau4.size();i++) {
+            System.out.println(chapeau4.get(i).getLevel());
         }
 
         return chapeaux;

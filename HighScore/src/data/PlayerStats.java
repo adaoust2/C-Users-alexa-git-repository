@@ -86,6 +86,9 @@ public class PlayerStats {
 		return endurrance;
 	}
 
+	/**
+	 * @param float endurrance
+	 **/
 	public void setEndurrance(float endurrance) {
 		this.endurrance = endurrance;
 	}

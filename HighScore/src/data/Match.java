@@ -1,17 +1,13 @@
 package data;
 
-/**@author oumar
- * 
- * 
- * 
- * */
+
 public class Match {
    
     private Club club1 ;
     private Club club2 ;
     private String result ; 
-
-
+    private String resultat ; 
+    
     /**
 	 * @param Club club1
 	 * @param Club club2
@@ -22,6 +18,7 @@ public class Match {
 		this.club1 = club1;
 		this.club2 = club2;
 		this.result = resultat;
+		this.resultat = resultat;
 	}
 
 	public Match() {
@@ -54,8 +51,8 @@ public class Match {
 	}
 
 	@Override
-	public String toString() {
-		return "Match [club 1 = " +club1 + "club2= "+club2+", result=" + result + "]";
+	public String toString(){
+		return "Match [club 1 = " +club1 + "club2= "+club2+", result=" + resultat + "]";
 	}
     
 }

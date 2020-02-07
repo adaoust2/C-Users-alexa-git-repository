@@ -1,4 +1,3 @@
-import data.Player;
 import manager.TournamentManger;
 
 public class Main {
