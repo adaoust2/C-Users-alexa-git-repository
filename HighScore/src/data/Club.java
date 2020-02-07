@@ -6,17 +6,16 @@ import java.util.HashMap;
  * @author Bjmeo
  * *************
  */
-public class Club {
+public class Club implements Comparable{
 
 	private String name;
 	private String group;
 	private HashMap<String, Player> players;
+	private float level;
 	private ClubStats cStats;
 	
 	
 	public Club() {
-		super();
-		// TODO Auto-generated constructor stub
 	} 
 
 
@@ -76,5 +75,18 @@ public class Club {
 		this.cStats = cStats;
 	}
 
-	
+	public float getLevel() {
+		return level;
+	}
+
+	public void setLevel(float level) {
+		this.level = level;
+	}
+
+
+	@Override
+	public int compareTo(Object o) {
+		float compareLevel =((Club)o).getLevel();
+		return Float.compare(this.level,compareLevel);
+	}
 }

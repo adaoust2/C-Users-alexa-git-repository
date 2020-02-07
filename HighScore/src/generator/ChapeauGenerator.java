@@ -11,15 +11,16 @@ public class ChapeauGenerator {
 
     }
 
-    public void generateChapeau(ArrayList<Club> clubs){
-        HashMap<Club, Float> listScore = new  HashMap<Club, Float>();
+    public ArrayList<ArrayList<Club>> generateChapeau(ArrayList<Club> clubs){
+        ArrayList<Club> listClub = new ArrayList<Club>();
 
         for(Club club : clubs){
             MoyenneGenrator generator = new MoyenneGenrator(club);
-            listScore.put(club, generator.calculMoyenne());
+            club.setLevel(generator.calculMoyenne());
+            listClub.add(club);
         }
 
-        listScore = sortByValue(listScore);
+        Collections.sort(listClub);
 
         ArrayList<ArrayList<Club>> chapeaux = new ArrayList<ArrayList<Club>>();
         ArrayList<Club> chapeau1 = new ArrayList<Club>();
@@ -29,36 +30,34 @@ public class ChapeauGenerator {
 
         for (int i=0; i<32; i++){
             if(i<8){
+                chapeau1.add(listClub.get(i));
             }else if (i>=8 && i<16){
-
+                chapeau2.add(listClub.get(i));
             }else if (i>=16 && i<24){
-
+                chapeau3.add(listClub.get(i));
             }else{
-
+                chapeau4.add(listClub.get(i));
             }
         }
+
+        chapeaux.add(chapeau1);
+        chapeaux.add(chapeau2);
+        chapeaux.add(chapeau3);
+        chapeaux.add(chapeau4);
 
         System.out.println("\n Chapeau 1");
 
         for(int i = 0; i<chapeau1.size();i++) {
-            System.out.println(chapeau1.get(i));
+            System.out.println(chapeau1.get(i).getLevel());
         }
 
         System.out.println("\n Chapeau 2");
 
         for(int i = 0; i<chapeau2.size();i++) {
-            System.out.println(chapeau2.get(i));
+            System.out.println(chapeau2.get(i).getLevel());
         }
-    }
 
-
-    public static HashMap<Club, Float> sortByValue(final HashMap<Club, Float> wordCounts) {
-
-        return wordCounts.entrySet()
-                .stream()
-                .sorted((HashMap.Entry.<Club, Float>comparingByValue().reversed()))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-
+        return chapeaux;
     }
 
 
