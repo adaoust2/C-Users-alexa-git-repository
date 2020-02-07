@@ -77,13 +77,9 @@ public class PlayerGenerator {
     }
 
     public static int randomStats(int min, int max){
-
         Random rand = new Random();
-
         int stat = rand.nextInt((max - min) + 1) + min;
-
         return stat;
-
     }
 
     public static PlayerStats generateStat() {
