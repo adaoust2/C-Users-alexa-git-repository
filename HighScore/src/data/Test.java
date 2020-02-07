@@ -3,30 +3,24 @@ package data;
 import java.util.*;
 
 import elements.GParameters;
-<<<<<<< HEAD
-import elements.Intervalle;
-=======
+
+
 import generator.ClubGenerator;
 import generator.MoyenneGenrator;
 import manager.MatchManager;
->>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
+
 
 public class Test {
 	private static int stat = 0;  
 	private static ArrayList<String> playersStats = new ArrayList<String>();
 
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 	public static void main(String[] args) {
 
-<<<<<<< HEAD
+
 		generateStat();
-=======
->>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
+
 		System.out.println("PLAYERS STATS:");
-<<<<<<< HEAD
         for(int i=0;i<playersStats.size();i++){
         	
         	System.out.println(playersStats.get(i));
@@ -75,10 +69,9 @@ public class Test {
 			}
 			playersStats.add(statInfos);
 			statInfos = "";
-=======
-		for (int i = 0; i < playersStats.size(); i++) {
-			System.out.println(playersStats.get(i));
->>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
+		for (int k = 0; k < playersStats.size(); k++) {
+			System.out.println(playersStats.get(k));
+
 		}
 
 		ClubGenerator generator = new ClubGenerator();
@@ -108,4 +101,5 @@ public class Test {
 		match.matchProcess(clubs.get(0), clubs.get(1));
 	}
 
+	}
 }
