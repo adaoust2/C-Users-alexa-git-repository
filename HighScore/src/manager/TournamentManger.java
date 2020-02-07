@@ -8,17 +8,27 @@ import generator.ClubGenerator;
 
 public class TournamentManger {
 	
-	ClubGenerator generator = new ClubGenerator();
-	ArrayList<Club> clubs = generator.generateClubs();
-	Iterator it = clubs.iterator();
-	Club current = (Club) it.next();
+	private ClubGenerator clubGenerator;
+	
+	private ArrayList<Club> clubsList;
 
     public TournamentManger(){
-
+    	clubsList = new ArrayList<Club>();
+    	clubGenerator = new ClubGenerator();
     }
+    
+    
+    public TournamentManger(ClubGenerator clubGenerator, ArrayList<Club> clubsList) {
+		super();
+		this.clubGenerator = clubGenerator;
+		this.clubsList = clubsList;
+	}
 
-    public void startTournament(){
-    	MatchManager match1 = new MatchManager(0,current , (Club) it.next());
+	public void startTournament(){
+    	clubsList = clubGenerator.generateClubs();
+    	Iterator<Club> it = clubsList.iterator();
+    	while(it.hasNext())
+    		System.out.println(it.next().toString());
     }
 
 }

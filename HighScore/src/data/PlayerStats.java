@@ -86,12 +86,9 @@ public class PlayerStats {
 		return endurrance;
 	}
 
-<<<<<<< HEAD
 	/**
 	 * @param float endurrance
 	 **/
-=======
->>>>>>> branch 'master' of https://github.com/adaoust2/C-Users-alexa-git-repository.git
 	public void setEndurrance(float endurrance) {
 		this.endurrance = endurrance;
 	}
