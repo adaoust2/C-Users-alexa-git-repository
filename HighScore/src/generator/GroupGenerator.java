@@ -9,6 +9,8 @@ public class GroupGenerator {
 
     private ArrayList<ArrayList<Club>> hats;
 
+    private static String[] groupeName = {"groupeA","groupeB","groupeC","groupeD","groupeE","groupeF","groupeG","groupeH"};
+
     public GroupGenerator(ArrayList<ArrayList<Club>> hats){
         this.hats = hats;
     }
@@ -39,10 +41,10 @@ public class GroupGenerator {
         for(ArrayList<Club> group : groups){
             for(ArrayList<Club> hat : hats){
                 group.add(hat.get(currentPosition));
+                hat.get(currentPosition).setGroup(groupeName[currentPosition]);
             }
             currentPosition++;
         }
-
         return groups;
     }
 

@@ -93,8 +93,8 @@ public class Club implements Comparable{
 	@Override
 	public String toString() {
 		return "Club [name=" + name + ", group=" + group + ", players=" + players + ", cStats=" + cStats + "]";
-	}
 
+	}
 	
 }
 
