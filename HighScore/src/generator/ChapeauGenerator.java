@@ -46,28 +46,28 @@ public class ChapeauGenerator {
         chapeaux.add(chapeau3);
         chapeaux.add(chapeau4);
 
-        System.out.println("\n Chapeau 1");
+        System.out.println("\n --- Chapeau 1 ----\n");
 
         for(int i = 0; i<chapeau1.size();i++) {
-            System.out.println(chapeau1.get(i).getLevel());
+            System.out.println(chapeau1.get(i).getName()+ "  |  "+chapeau1.get(i).getLevel());
         }
 
-        System.out.println("\n Chapeau 2");
+        System.out.println("\n --- Chapeau 2 ----\n");
 
         for(int i = 0; i<chapeau2.size();i++) {
-            System.out.println(chapeau2.get(i).getLevel());
+            System.out.println(chapeau2.get(i).getName()+ "  |  "+chapeau2.get(i).getLevel());
         }
-        
-        System.out.println("\n Chapeau 3");
+
+        System.out.println("\n --- Chapeau 3 ----\n");
 
         for(int i = 0; i<chapeau3.size();i++) {
-            System.out.println(chapeau3.get(i).getLevel());
+            System.out.println(chapeau3.get(i).getName()+ "  |  "+chapeau3.get(i).getLevel());
         }
 
-        System.out.println("\n Chapeau 4");
+        System.out.println("\n --- Chapeau 4 ----\n");
 
         for(int i = 0; i<chapeau4.size();i++) {
-            System.out.println(chapeau4.get(i).getLevel());
+            System.out.println(chapeau4.get(i).getName()+ "  |  "+chapeau4.get(i).getLevel());
         }
 
         return chapeaux;
