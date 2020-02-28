@@ -39,9 +39,11 @@ public class GroupGenerator {
 
         int currentPosition=0;
         for(ArrayList<Club> group : groups){
+            System.out.println(" ------   "+groupeName[currentPosition]+" -----");
             for(ArrayList<Club> hat : hats){
                 group.add(hat.get(currentPosition));
                 hat.get(currentPosition).setGroup(groupeName[currentPosition]);
+                System.out.println(hat.get(currentPosition).getName());
             }
             currentPosition++;
         }

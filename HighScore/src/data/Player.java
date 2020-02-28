@@ -4,7 +4,7 @@ package data;
  * *************
  */
 public class Player {
-	
+
 	private String name;
 	private String poste;
 	private float height ;
@@ -118,4 +118,6 @@ public class Player {
 	public void setpStats(PlayerStats pStats){
 		this.pStats = pStats;
 	}
+
+
 }
